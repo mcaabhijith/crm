@@ -19,9 +19,10 @@ export class ListRestaurantComponent implements OnInit {
     });
     }
     deleteResto(resto){
-      this.collection.splice(resto.id,1)
+      this.collection.splice(resto.id)
       this.CommonService.deleteResto(resto).subscribe((result)=>{
         console.log("Data is Deleted Successful",result)
+        
         this.alert=true;
       })
     }

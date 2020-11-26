@@ -11,7 +11,7 @@
 <form [formGroup]="addRestaurant" (ngSubmit)="createResto()"> 
   <div class="form-group">
     <label>Name</label>
-    <input type="text"  class="form-control" placeholder="Enter name" formControlName="name">
+    <input type="text" required pattern="[A-Za-z]" class="form-control" placeholder="Enter name" formControlName="name">
   </div>
   <div class="form-group">
     <label>Address</label>
@@ -19,7 +19,7 @@
   </div>
   <div class="form-group">
     <label>Mobile</label>
-    <input type="text" class="form-control" placeholder="Enter Mobile" formControlName="mobile">
+    <input type="text" class="form-control" placeholder="Enter Mobile" pattern= "[0-9]" formControlName="mobile">
   </div>
   <div class="form-group">
     <label>Food Items</label>
